@@ -13,7 +13,7 @@ import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 // to handle import statements. Instead, you must include components in scope
 // here.
 const components = {
-  BlogNavigation: dynamic(() => import('../../components/BlogNavigation')),
+  BlogNavigation: dynamic(() => import("../../components/BlogNavigation")),
 };
 
 export default function PostPage({ source, frontMatter }) {
@@ -22,7 +22,7 @@ export default function PostPage({ source, frontMatter }) {
       <div>
         <PostHeader title={frontMatter.title} date={frontMatter.date} />
       </div>
-      <article className="prose md:prose-lg dark:prose-dark">
+      <article className="prose md:prose-xl dark:prose-dark md:dark:prose-xl">
         <MDXRemote {...source} components={components} />
       </article>
     </Layout>
