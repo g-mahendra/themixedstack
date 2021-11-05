@@ -1,0 +1,125 @@
+---
+title: Hiding scrollbars in tailwind and NextJS project ( only for Chromium based browsers )
+description: Here I have mentioned a way to hide the scrollbars around a scrolling webpage.
+date: 20-September-2021
+author: Mahendra Gharge
+---
+
+## What is this ?
+
+You might have come across a situation where you have some web page or website which needs scrolling of content.
+This is no big deal untill you want to hide those ugly looking scrollbars which show up all the time.  
+In this post, I am going to show you a way with which you can hide those scrollbars atleast on Chromium based browsers.
+
+## Basic NextJS and Tailwind Setup
+
+You can create bare minimum **NextJS** app with the use of following command
+
+```
+npx create-next-app your-project-name
+```
+
+To use tailwindCSS inside NextJS,
+
+```
+cd your-project-name
+```
+
+Install the tailwind css packages using following command ( you can find all these tailwind commands in the official [install guide for next js](https://tailwindcss.com/docs/guides/nextjs) repo )
+
+```
+# If you're on Next.js v10 or newer
+
+yarn add -D tailwindcss@latest postcss@latest autoprefixer@latest
+```
+
+or
+
+```
+# If you're on Next.js v9 or older
+
+yarn add -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+```
+
+Now that Tailwind is installed, use
+
+```
+npx tailwindcss init -p
+```
+
+This will create `tailwind.config.js` and `postcss.config.js`files inside your project's root directory. Let's not get too concerned about it. What we have to do is just change
+`purge: []`,
+
+to  
+`purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],`
+
+so that tailwind can remove all the un-necessary styles that take up a lot of space. Don't worry much about it. May be we can talk abou it in some other post.
+
+Here you have two choices of adding tailwind styles.  
+One way is to remove the styles directory provided by NextJS setup and add
+
+```jsx
+import "tailwindcss/tailwind.css";
+```
+
+at the top of `_app.js` file.
+This way, we can completely rely on styles provided by tailwind without having to write our own css anywhere inside the project. But for our use case we want to add custome css so what you have to do is add
+
+```CSS
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+these lines inside `globals.css` file and keep the import statement of globals.css as it is at the top of `_app.js` file.
+
+Now half of our work is done as we just have to add a few lines of css inside our globals.css file.
+
+Here also you have two choices.
+
+- hide scrollbar completely
+  or
+- customize the appearence of scrollbar without hiding it completely.
+
+If you want to completely hide the scrollbar, add
+
+```CSS
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+```
+
+This will completely minimize the appearence of scrollbar. You can see this effect yourself right now. Even if you are able to scroll the content, you don't see a scrollbar
+for this whole blog as shown in image bellow.
+
+![page without scrollbars](/images/without.png)
+
+If you want to change the appearence of the scrollbar then add
+
+```CSS
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: rgb(100, 100, 100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 100vh;
+  border: 3px solid #edf2f7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+```
+
+The names of css properties are self explanatory.
+The property with the name **track** changes the appearence of the scrollbar background.
+You can choose whatever color you want.
+Similarly the property with the name **thumb** changes the appearence of the pill shaped runner running on the track.
+
+In the image shown bellow, you can see the customized scrollbar for this blog.  
+![Page with scrollbar](/images/with.png)
+
+That's it. This is how you hide the scrollbar for the websites with Chromium based browsers.

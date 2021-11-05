@@ -1,0 +1,73 @@
+---
+title: Creating a simple but beautiful blog using NextJS, Markdown and TailwindCSS ( PART - 1 )
+description: This blog talks briefly about some terminalogies and what hurdles I faced in brief.
+date: 4-September-2021
+author: Mahendra Gharge
+---
+
+### What is this ?
+
+As you might have noticed from the title that this is a two part blog where in this first part I will share some terminologies
+and what challenges I faced in order to put this blog working. In the second part, we will discuss the steps to setup the blog locally on your system. I suggest you to stick around but if you want, you are free to move to next part using the link down bellow.
+
+<BlogNavigation
+  to="/posts/next-mdx-tailwind-part-2"
+  name="next-mdx-tailwind-part-2"
+/>
+
+### A brief history
+
+This is my first blog post so it is evident that I am new to this field.
+I had previous knowledge of NextJS and a little bit of Markdown so
+I decided go with NextJS and Mdx blog. For styling I first decided to go with pure css but then I realised that if I focus on styling then I will not be able to complete my blogs in time. That's why I decided to go with Tailwind CSS as it provides utility classes which helps create amazing UIs quickly and and in no time. If one has a basic css knowledge of CSS, it is a breeze to use tailwind.
+
+In a single paragraph I talked about three things namely NextJS, MDX and TailwindCSS. What are they ? Let us describe them in brief.
+
+- **NextJS**:  
+  NextJS is a React framework which helps developers create web
+  apps with little or nearly no overhead of dealing with webpack and other web development paradigms.
+  The Next gives us choice of static site generation or
+  server side rendering depending on our needs.
+  You don't have to have any knowledge of these topics to continue with this blog.
+  Learn more about [NextJS](https://nextjs.org/learn/basics/create-nextjs-app?utm_source=next-site&utm_medium=homepage-cta&utm_campaign=next-website)
+
+- **MDX**:  
+  MDX is an extensio to pure markdown. The original markdown does not let us import any other custome components in the markdown file.
+  This problem is solved by MDX and with MDX we can import our custome components inside the mdx files which helps us create stunning blogs with a lot of customizations.
+  You can check out more about [MDXJS](https://mdxjs.com/).
+
+- **Tailwind**:  
+  Honestly speaking, I fell in love with TailwindCSS when I first saw how easy it is to create UIs using the utility classes provided by Tailwind. Even if you are noob with CSS, you can simply get started using Tailwind by following their [documentation](https://tailwindcss.com/docs/).
+  Tailwind has created special classes with generic names which include a chunk of CSS directed towords a special purpose.  
+  For Example:  
+  `text-2xl` classname creates styles used to show a text which has a `font-size: 2.5 rem` and `line-height: 2rem`.
+
+I wanted to create a blog which I can customize according to my needs. So I decided to choose the above stack but as I had no knowledge, all the setup of the blog or overwhelming for me.  
+I started searching for tutorials online but nearly all of them are at least 6 months old and since then, a lot of things have changed about technologies which I wanted to use in my blog.
+As I was unable to follow along any tutorial, I decided to search for any such repo where I can get all the setup I want but can style as I wanted it to be using tailwind. I didn't get any such repo but
+insted what I got was an official repo provided by NextJS where all the setup of markdown and mdx was already ready,
+
+The repo provides nearly everything that we need in order to run a blog. The repo includes following packages which puts everything together.
+
+- `next-mdx-remote` is an npm package built so that whether it is local content that we want to deal with or some CMS where our content resides, the packages handles everything about mardkown/mdx and helps it to render on our browser screen.
+- `gray-matter` is a package which deals with extracting the frontmatter (sounds fancy but it really means the content which is present at the start of a markdown file which gives the metada about the blog such as title, description, posting date etc.).
+
+There are other options as well but we have discussed the above because those are the packages we are using for the blog.
+
+The thing missing was Tailwind so I tried of adding it on my own. I didn't know if it will work but I gave it a try and BAAM! it worked ( partially ).
+
+Why I said partially has an important reason.  
+TailwindCSS has a "Feature" accoring to Tailwind developers and a problem according to some normal developers where Tailwind removes all the default browser styles so that
+whether it is `h1` or `a` all look the same. Tailwind developers say that every style should be applied from ground up in order to keep styles in sync with each other. That's a valid argument but what it did to me was it killed all the styles of markdown which is rendered to browser.
+As we can not see the html code of markdown untill we build our app which gets rendered to screen, we cannot change the styles by adding normal tailwind classes to those elements.
+
+Here my another search started so as to how can I style markdown without using html elements generated and then I found a tailwind package called **Tailwind typography**.  
+[Tailwind Typography](https://github.com/tailwindlabs/tailwindcss-typography) provides some utility classes which help us style our markdown without even touching a single html element generated for rendering. Cool, isn't it?.  
+I guess That's all we need to know in order to get started with our blog.
+
+From here onwords, my "searches" were over and I finally started to put things together as discussed in the next part of this blog link of which can be found bellow.
+
+<BlogNavigation
+  to="/posts/next-mdx-tailwind-part-2"
+  name="next-mdx-tailwind-part-2"
+/>
