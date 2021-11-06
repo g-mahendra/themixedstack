@@ -80,7 +80,18 @@ const About = () => {
     },
   ];
   return (
-    <Layout>
+    <Layout
+      headData={{
+        title: "About the Author and blog",
+        description: `The Author ( g-mahendra ) of this blog is an undergraduate student at
+      Walchand College of Engineering, Sangli in India. He is passionate
+      about web and web frameworks specally REACT ( NextJS ) and tailwind-css wants to share what he
+      has learnt till now and what he will learn further with everyone. This
+      blog is one the means he uses to share his learnings with thw world`,
+        image: "/icons/g-mahendra.svg",
+        imageAlt: "An avatar of author of The Mixed Stack blog",
+      }}
+    >
       <div className="space-y-2">
         <div className="flex flex-col items-center w-max">
           <div className="rounded-full border-teal border-4 w-max flex flex-col items-center">

@@ -7,9 +7,16 @@ import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
 
 const AllPosts = ({ posts }) => {
   return (
-    <Layout>
+    <Layout
+      headData={{
+        title: "All Blog Posts",
+        description: `The list of all blog posts present in The Mixed Stack Blog`,
+        image: "/icons/mixed_stack_logo.svg",
+        imageAlt: "The Mixed Stack website logo"
+      }}
+    >
       <div className="space-y-10">
-        <h4 className="text-3xl font-bold">All Posts</h4>
+        <h4 className="text-3xl font-bold">All Blog Posts</h4>
         <div className="space-y-2">
           {posts.map((post) => (
             <div className="md:w-4/5" key={post.filePath}>

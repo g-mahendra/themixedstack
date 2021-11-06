@@ -14,11 +14,18 @@ import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 // here.
 const components = {
   BlogNavigation: dynamic(() => import("../../components/BlogNavigation")),
+  BlogImage: dynamic(() => import("../../components/BlogImage")),
 };
 
 export default function PostPage({ source, frontMatter }) {
   return (
-    <Layout>
+    <Layout
+      headData={{
+        title: frontMatter.title,
+        description: frontMatter.description,
+        image: "/icons/mixed_stack_logo.svg",
+      }}
+    >
       <div>
         <PostHeader title={frontMatter.title} date={frontMatter.date} />
       </div>

@@ -8,11 +8,22 @@ import Image from "next/image";
 
 export default function Index({ posts }) {
   return (
-    <Layout>
+    <Layout
+      headData={{
+        title: "The Mixed Stack Blog | g-mahendra",
+        description: `This is a blog where the author g-mahendra shares some of his
+        learnings so far about javascript, ReactJS, NextJS etc so that
+        everyone can benifit from his learnings`,
+        image: "/icons/mixed_stack_logo.svg",
+        imageAlt: "The Mixed Stack website logo"
+      }}
+    >
       <div className="space-y-10">
         <div className="flex flex-col-reverse md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col md:w-3/4 space-y-1">
-            <h1 className="md:text-4xl text-3xl font-bold">The Mixed Stack Blog</h1>
+            <h1 className="md:text-4xl text-3xl font-bold">
+              The Mixed Stack Blog | g-mahendra
+            </h1>
             <p className="md:text-lg text-base">
               This is a blog where the author g-mahendra shares some of his
               learnings so far about javascript, ReactJS, NextJS etc so that
@@ -32,7 +43,9 @@ export default function Index({ posts }) {
                 href={`/posts/[slug]`}
               >
                 <a>
-                  <h5 className="md:text-xl text-lg font-bold hover:text-teal">{post.data.title}</h5>
+                  <h5 className="md:text-xl text-lg font-bold hover:text-teal">
+                    {post.data.title}
+                  </h5>
                   <h6 className="md:text-lg">{post.data.description}</h6>
                 </a>
               </Link>

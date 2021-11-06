@@ -62,9 +62,6 @@ module.exports = {
               color: "white",
               backgroundColor: "#003030",
             },
-            "img:hover": {
-              transform: "scale(1.2)",
-            },
           },
         },
         DEFAULT: {
@@ -94,9 +91,6 @@ module.exports = {
               color: "white",
               backgroundColor: "#003030",
             },
-            "img:hover": {
-              transform: "scale(1.2)",
-            },
           },
         },
         xl: {
@@ -125,9 +119,6 @@ module.exports = {
             blockquote: {
               color: "white",
               backgroundColor: "#003030",
-            },
-            "img:hover": {
-              transform: "scale(1.2)",
             },
           },
         },

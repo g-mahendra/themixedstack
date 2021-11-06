@@ -60,7 +60,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <nav className="flex md:hidden flex-row items-center justify-between px-4 m-auto mb-5 py-4 z-10">
+      <nav className="bg-white dark:bg-main flex md:hidden flex-row items-center justify-between px-4 m-auto mb-5 py-4 z-10">
         <div>
           <h2 className="text-black dark:text-white text-xl">
             The Mixed Stack
