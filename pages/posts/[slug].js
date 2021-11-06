@@ -22,7 +22,7 @@ export default function PostPage({ source, frontMatter }) {
       <div>
         <PostHeader title={frontMatter.title} date={frontMatter.date} />
       </div>
-      <article className="prose md:prose-xl dark:prose-dark md:dark:prose-xl">
+      <article className="prose md:prose-lg dark:prose-dark md:dark:prose-lg">
         <MDXRemote {...source} components={components} />
       </article>
     </Layout>
