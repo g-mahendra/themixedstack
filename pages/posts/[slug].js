@@ -23,7 +23,8 @@ export default function PostPage({ source, frontMatter }) {
       headData={{
         title: frontMatter.title,
         description: frontMatter.description,
-        image: "/icons/mixed_stack_logo.svg",
+        image: frontMatter.image ? frontMatter.image : "",
+        imageAlt: frontMatter.imageAlt ? frontMatter.imageAlt : "",
       }}
     >
       <div>
