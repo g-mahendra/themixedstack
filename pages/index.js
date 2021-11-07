@@ -15,7 +15,8 @@ export default function Index({ posts }) {
         learnings so far about javascript, ReactJS, NextJS etc so that
         everyone can benifit from his learnings`,
         image: "/icons/mixed_stack_logo.svg",
-        imageAlt: "The Mixed Stack website logo"
+        imageAlt: "The Mixed Stack website logo",
+        postedOn: null
       }}
     >
       <div className="space-y-10">

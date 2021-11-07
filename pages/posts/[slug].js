@@ -25,6 +25,7 @@ export default function PostPage({ source, frontMatter }) {
         description: frontMatter.description,
         image: frontMatter.image ? frontMatter.image : "",
         imageAlt: frontMatter.imageAlt ? frontMatter.imageAlt : "",
+        postedOn: new Date(frontMatter.date).toISOString(),
       }}
     >
       <div>

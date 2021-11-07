@@ -90,6 +90,7 @@ const About = () => {
       blog is one the means he uses to share his learnings with thw world`,
         image: "/icons/g-mahendra.svg",
         imageAlt: "An avatar of author of The Mixed Stack blog",
+        postedOn: null
       }}
     >
       <div className="space-y-2">

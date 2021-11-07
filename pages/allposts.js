@@ -12,7 +12,8 @@ const AllPosts = ({ posts }) => {
         title: "All Blog Posts",
         description: `The list of all blog posts present in The Mixed Stack Blog`,
         image: "/icons/mixed_stack_logo.svg",
-        imageAlt: "The Mixed Stack website logo"
+        imageAlt: "The Mixed Stack website logo",
+        postedOn: null
       }}
     >
       <div className="space-y-10">
