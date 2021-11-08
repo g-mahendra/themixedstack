@@ -15,7 +15,7 @@ export const getServerSideProps = async ({ res }) => {
         "_app.js",
         "_document.js",
         "_error.js",
-        "sitemap.xml.js",
+        "createSitemap.js",
         "posts",
       ].includes(staticPage);
     })
@@ -45,7 +45,7 @@ export const getServerSideProps = async ({ res }) => {
       ${moreRequiredPages
         .map((url) => {
           url = url.replace(".mdx", "");
-          url = `${baseUrl}/${url}`;
+          url = `${baseUrl}/posts/${url}`;
           return `
             <url>
               <loc>${url}</loc>

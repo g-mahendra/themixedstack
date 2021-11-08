@@ -2,36 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://themixedstack.vercel.app/about</loc>
-    <lastmod>2021-11-08T07:30:10.062Z</lastmod>
+    <lastmod>2021-11-08T07:38:04.224Z</lastmod>
   </url>
 
   <url>
     <loc>https://themixedstack.vercel.app/allposts</loc>
-    <lastmod>2021-11-08T07:30:10.062Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://themixedstack.vercel.app/createSitemap</loc>
-    <lastmod>2021-11-08T07:30:10.062Z</lastmod>
+    <lastmod>2021-11-08T07:38:04.224Z</lastmod>
   </url>
 
   <url>
     <loc>https://themixedstack.vercel.app/</loc>
-    <lastmod>2021-11-08T07:30:10.062Z</lastmod>
+    <lastmod>2021-11-08T07:38:04.224Z</lastmod>
   </url>
 
   <url>
-    <loc>https://themixedstack.vercel.app/hide-scrollbar-on-chrome</loc>
-    <lastmod>2021-11-08T07:30:10.062Z</lastmod>
+    <loc>https://themixedstack.vercel.app/posts/hide-scrollbar-on-chrome</loc>
+    <lastmod>2021-11-08T07:38:04.224Z</lastmod>
   </url>
 
   <url>
-    <loc>https://themixedstack.vercel.app/next-mdx-tailwind-part-1</loc>
-    <lastmod>2021-11-08T07:30:10.062Z</lastmod>
+    <loc>https://themixedstack.vercel.app/posts/next-mdx-tailwind-part-1</loc>
+    <lastmod>2021-11-08T07:38:04.224Z</lastmod>
   </url>
 
   <url>
-    <loc>https://themixedstack.vercel.app/next-mdx-tailwind-part-2</loc>
-    <lastmod>2021-11-08T07:30:10.062Z</lastmod>
+    <loc>https://themixedstack.vercel.app/posts/next-mdx-tailwind-part-2</loc>
+    <lastmod>2021-11-08T07:38:04.224Z</lastmod>
   </url>
 </urlset>
