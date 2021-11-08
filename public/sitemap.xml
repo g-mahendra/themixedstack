@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://themixedstack.vercel.app/about</loc>
-    <lastmod>2021-11-08T07:38:04.224Z</lastmod>
+    <loc>https://themixedstack.com/about</loc>
+    <lastmod>2021-11-08T15:55:48.163Z</lastmod>
   </url>
 
   <url>
-    <loc>https://themixedstack.vercel.app/allposts</loc>
-    <lastmod>2021-11-08T07:38:04.224Z</lastmod>
+    <loc>https://themixedstack.com/allposts</loc>
+    <lastmod>2021-11-08T15:55:48.163Z</lastmod>
   </url>
 
   <url>
-    <loc>https://themixedstack.vercel.app/</loc>
-    <lastmod>2021-11-08T07:38:04.224Z</lastmod>
+    <loc>https://themixedstack.com/</loc>
+    <lastmod>2021-11-08T15:55:48.163Z</lastmod>
   </url>
 
   <url>
-    <loc>https://themixedstack.vercel.app/posts/hide-scrollbar-on-chrome</loc>
-    <lastmod>2021-11-08T07:38:04.224Z</lastmod>
+    <loc>https://themixedstack.com/posts/hide-scrollbar-on-chrome</loc>
+    <lastmod>2021-11-08T15:55:48.163Z</lastmod>
   </url>
 
   <url>
-    <loc>https://themixedstack.vercel.app/posts/next-mdx-tailwind-part-1</loc>
-    <lastmod>2021-11-08T07:38:04.224Z</lastmod>
+    <loc>https://themixedstack.com/posts/next-mdx-tailwind-part-1</loc>
+    <lastmod>2021-11-08T15:55:48.163Z</lastmod>
   </url>
 
   <url>
-    <loc>https://themixedstack.vercel.app/posts/next-mdx-tailwind-part-2</loc>
-    <lastmod>2021-11-08T07:38:04.224Z</lastmod>
+    <loc>https://themixedstack.com/posts/next-mdx-tailwind-part-2</loc>
+    <lastmod>2021-11-08T15:55:48.163Z</lastmod>
   </url>
 </urlset>
