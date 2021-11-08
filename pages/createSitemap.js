@@ -6,10 +6,7 @@ const Sitemap = () => <div>Bye</div>;
 export const getServerSideProps = async ({ res }) => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
 
-  const baseUrl = {
-    development: "http://localhost:5000",
-    production: "https://mydomain.com",
-  }[process.env.NODE_ENV];
+  const baseUrl = "https://themixedstack.vercel.app"
 
   const requiredPages = fs
     .readdirSync("pages")
