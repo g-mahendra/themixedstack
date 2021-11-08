@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://localhost:5000/about</loc>
+    <lastmod>2021-11-08T07:19:39.218Z</lastmod>
+  </url>
+
+  <url>
+    <loc>http://localhost:5000/allposts</loc>
+    <lastmod>2021-11-08T07:19:39.218Z</lastmod>
+  </url>
+
+  <url>
+    <loc>http://localhost:5000/createSitemap</loc>
+    <lastmod>2021-11-08T07:19:39.218Z</lastmod>
+  </url>
+
+  <url>
+    <loc>http://localhost:5000/</loc>
+    <lastmod>2021-11-08T07:19:39.218Z</lastmod>
+  </url>
+
+  <url>
+    <loc>http://localhost:5000/hide-scrollbar-on-chrome</loc>
+    <lastmod>2021-11-08T07:19:39.218Z</lastmod>
+  </url>
+
+  <url>
+    <loc>http://localhost:5000/next-mdx-tailwind-part-1</loc>
+    <lastmod>2021-11-08T07:19:39.218Z</lastmod>
+  </url>
+
+  <url>
+    <loc>http://localhost:5000/next-mdx-tailwind-part-2</loc>
+    <lastmod>2021-11-08T07:19:39.218Z</lastmod>
+  </url>
+</urlset>

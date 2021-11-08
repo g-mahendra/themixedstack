@@ -1,8 +1,11 @@
 import fs from "fs";
+import prettier from 'prettier';
 
-const Sitemap = () => {};
+const Sitemap = () => <div>Bye</div>;
 
-export const getServerSideProps = ({ res }) => {
+export const getServerSideProps = async ({ res }) => {
+  const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
+
   const baseUrl = {
     development: "http://localhost:5000",
     production: "https://mydomain.com",
@@ -57,9 +60,12 @@ export const getServerSideProps = ({ res }) => {
   </urlset>
 `;
 
-  res.setHeader("Content-Type", "text/xml");
-  res.write(sitemap);
-  res.end();
+  const formatted = prettier.format(sitemap, {
+    ...prettierConfig,
+    parser: "html",
+  });
+
+  fs.writeFileSync("public/sitemap.xml", formatted);
 
   return {
     props: {},
