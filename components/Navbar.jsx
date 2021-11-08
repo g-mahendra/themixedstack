@@ -48,6 +48,7 @@ const Navbar = () => {
           </li>
           <li className="cursor-pointer">
             <Image
+              alt="theme changer"
               onClick={() =>
                 theme === "light" ? setTheme("dark") : setTheme("light")
               }
@@ -67,8 +68,9 @@ const Navbar = () => {
           </h2>
         </div>
         <ul className="flex flex-row items-center space-x-2">
-          <div className="border-2 border-teal dark:border-teal flex flex-col items-center justify-center rounded-full p-2 cursor-pointer">
+          <li className="border-2 border-teal dark:border-teal flex flex-col items-center justify-center rounded-full p-2 cursor-pointer">
             <Image
+              alt="theme changer"
               onClick={() =>
                 theme === "light" ? setTheme("dark") : setTheme("light")
               }
@@ -78,9 +80,10 @@ const Navbar = () => {
               height={20}
               width={20}
             />
-          </div>
-          <div className="border-2 border-teal dark:border-teal flex flex-col items-center justify-center rounded-full p-2 cursor-pointer">
+          </li>
+          <li className="border-2 border-teal dark:border-teal flex flex-col items-center justify-center rounded-full p-2 cursor-pointer">
             <Image
+              alt="hamburger menu"
               onClick={() => setOpen(!open)}
               src={`${
                 theme === "light" ? "/icons/menu.svg" : "/icons/menu_white.svg"
@@ -88,7 +91,7 @@ const Navbar = () => {
               height={20}
               width={20}
             />
-          </div>
+          </li>
         </ul>
         {open && (
           <ul className="fixed bottom-0 right-0 w-screen fles flex-col items-center bg-white dark:text-white text-black dark:bg-main space-y-4 py-3 rounded-tl-xl rounded-tr-xl border-t-2 border-teal">

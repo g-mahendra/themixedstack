@@ -16,7 +16,7 @@ export default function Index({ posts }) {
         everyone can benifit from his learnings`,
         image: "/icons/mixed_stack_logo.svg",
         imageAlt: "The Mixed Stack website logo",
-        postedOn: null
+        postedOn: null,
       }}
     >
       <div className="space-y-10">
@@ -32,10 +32,15 @@ export default function Index({ posts }) {
             </p>
           </div>
           <div className="w-1/4 flex flex-row items-center justify-center">
-            <Image src="/icons/mixed_stack_logo.svg" height={125} width={125} />
+            <Image
+              alt="website logo"
+              src="/icons/mixed_stack_logo.svg"
+              height={125}
+              width={125}
+            />
           </div>
         </div>
-        <h4 className="text-3xl font-bold">Recent Posts</h4>
+        <h2 className="text-3xl font-bold">Recent Posts</h2>
         <div className="space-y-2">
           {posts.map((post) => (
             <div className="md:w-4/5" key={post.filePath}>
@@ -44,10 +49,10 @@ export default function Index({ posts }) {
                 href={`/posts/[slug]`}
               >
                 <a>
-                  <h5 className="md:text-xl text-lg font-bold hover:text-teal">
+                  <h3 className="md:text-xl text-lg font-bold hover:text-teal">
                     {post.data.title}
-                  </h5>
-                  <h6 className="md:text-lg">{post.data.description}</h6>
+                  </h3>
+                  <h4 className="md:text-lg">{post.data.description}</h4>
                 </a>
               </Link>
               <p className="font-extralight text-sm">
