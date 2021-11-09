@@ -30,6 +30,10 @@ class MyDocument extends Document {
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#da532c" />
+          <meta
+            name="google-site-verification"
+            content="JhXLEtsybBqiyGOlbI2Fu6Q3Dbak5Br1FtKN6Zdu0_E"
+          />
         </Head>
         <body className="bg-white dark:bg-main text-black dark:text-white antialiased">
           <Main />
