@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://themixedstack.vercel.app/sitemap.xml
+Sitemap: https://themixedstack.com/sitemap.xml
