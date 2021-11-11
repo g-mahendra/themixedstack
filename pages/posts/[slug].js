@@ -14,7 +14,8 @@ import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 // here.
 const components = {
   BlogNavigation: dynamic(() => import("../../components/BlogNavigation")),
-  BlogImage: dynamic(() => import("../../components/BlogImage")),
+  BlogNextImage: dynamic(() => import("../../components/BlogNextImage")),
+  CustomLink: dynamic(() => import("../../components/CustomLink")),
 };
 
 export default function PostPage({ source, frontMatter }) {

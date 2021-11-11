@@ -17,11 +17,12 @@ const Layout = ({ children, headData }) => {
         <meta property="og:title" content={`${headData.title}`} />
         <meta property="og:description" content={`${headData.description}`} />
         <meta property="og:image" content={`${SITE_URL}${headData.image}`} />
-        <meta property="og:image:alt" content={`${headData.imageAlt}`}/>
-        <meta property="og:image:width" content="1366"/>
-        <meta property="og:image:height" content="768"/>
+        <meta name="twitter:image" content={`${SITE_URL}${headData.image}`} />
+        <meta property="og:image:alt" content={`${headData.imageAlt}`} />
+        <meta property="og:image:width" content="1366" />
+        <meta property="og:image:height" content="768" />
         <meta name="author" content="g-mahendra" />{" "}
-        <meta property="og:locale" content="en-us"/>
+        <meta property="og:locale" content="en-us" />
         <meta property="og:site_name" content={`${SITE_NAME}`} />
         {pathname === "/" ? (
           <>
@@ -39,18 +40,19 @@ const Layout = ({ children, headData }) => {
         ) : (
           <meta name="theme-color" content="#ffffff" />
         )}
-        <meta name="robots" content="index,follow"></meta>
-        <meta name="googlebot" content="index,follow"></meta>
         {pathname.includes("posts") ? (
           <meta property="og:type" content="article"></meta>
         ) : (
           <meta property="og:type" content="website"></meta>
         )}
         {headData.postedOn && (
-          <meta
-            property="article:published_time"
-            content={`${headData.postedOn}`}
-          ></meta>
+          <>
+            <meta
+              property="article:published_time"
+              content={`${headData.postedOn}`}
+            />
+            <meta property="article:modified_time" content={`${headData.postedOn}`} />
+          </>
         )}
       </Head>
       <Navbar />

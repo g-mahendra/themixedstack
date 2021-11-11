@@ -90,7 +90,7 @@ const About = () => {
       blog is one the means he uses to share his learnings with thw world`,
         image: "/icons/g-mahendra.svg",
         imageAlt: "An avatar of author of The Mixed Stack blog",
-        postedOn: null
+        postedOn: null,
       }}
     >
       <div className="space-y-2">
@@ -133,8 +133,9 @@ const About = () => {
                   width={40}
                 />
                 <a
-                  className="hover:underline hover:text-teal"
+                  className="hover:underline hover:text-teal dark:hover:text-lightTeal"
                   target="_blank"
+                  rel="noopener noreferrer"
                   href={`${item.url}`}
                 >
                   {item.name}

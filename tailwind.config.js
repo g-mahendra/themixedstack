@@ -8,8 +8,9 @@ module.exports = {
     backgroundColor: (theme) => ({
       ...theme("colors"),
       main: "#212225",
-      teal: "#008080",
+      lightTeal: "#79ffe1",
       lightGray: "rgba(100, 100, 100, 0.5)",
+      teal: "#008080"
     }),
     colors: {
       transparent: "transparent",
@@ -20,8 +21,9 @@ module.exports = {
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
-      teal: "#008080",
+      lightTeal: "#79ffe1",
       main: "#212225",
+      teal: '#008080'
     },
     extend: {
       typography: (theme) => ({
@@ -38,18 +40,19 @@ module.exports = {
               color: "white",
             },
             a: {
-              color: "#008080",
+              color: "#79ffe1",
             },
             pre: {
-              backgroundColor: "rgba(50, 50, 50, 0.9)",
-              border: "1px solid #008080",
+              backgroundColor: "rgba(50, 50, 50, 1)",
+              boxShadow: "5px w0px 0px 10px 10px #79ffe1",
             },
             "pre code": {
               backgroundColor: "transparent",
+              color: "white",
             },
             code: {
-              backgroundColor: "#808080",
-              color: "white",
+              backgroundColor: "#000",
+              color: "#79ffe1",
               padding: "5px",
             },
             "code:before": {
@@ -67,18 +70,19 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: "#008080",
+              color: "#79ffe1",
             },
             pre: {
               backgroundColor: "rgba(50, 50, 50, 0.9)",
-              border: "1px solid #008080",
+              boxShadow: "5px 10px #79ffe1",
             },
             "pre code": {
               backgroundColor: "transparent",
+              color: "white",
             },
             code: {
-              backgroundColor: "#808080",
-              color: "white",
+              backgroundColor: "#000",
+              color: "#79ffe1",
               padding: "5px",
             },
             "code:before": {
@@ -93,21 +97,22 @@ module.exports = {
             },
           },
         },
-        xl: {
+        lg: {
           css: {
             a: {
-              color: "#008080",
+              color: "#79ffe1",
             },
             pre: {
               backgroundColor: "rgba(50, 50, 50, 0.9)",
-              border: "1px solid #008080",
+              boxShadow: "5px 10px #79ffe1",
             },
             "pre code": {
               backgroundColor: "transparent",
+              color: "white",
             },
             code: {
-              backgroundColor: "#808080",
-              color: "white",
+              backgroundColor: "#000",
+              color: "#79ffe1",
               padding: "5px",
             },
             "code:before": {

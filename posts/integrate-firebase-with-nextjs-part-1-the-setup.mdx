@@ -1,0 +1,141 @@
+---
+title: "Integrate Firebase with NextJs and tailwind-css | Part-1 The setup"
+description: "This blog talks briefly about what steps I took in order to set this blog up."
+date: "2021-11-11"
+author: "Mahendra Gharge"
+thumbnail: "/images/next_firebase_tailwind_part_1_thumbnail.png"
+imageAlt: "Integrate Firebase with NextJs and tailwind-css | Part-1 The setup"
+summary: "Integrating the firebase with nextjs along with tailwind css is one of the most amazing combinations out there in web development world"
+---
+
+<BlogNextImage
+  shouldPreload={true}
+  url="/images/next_firebase_tailwind_part_1_thumbnail.png"
+  alt="Title: Integrate Firebase with NextJs and tailwind-css | Part-1 The setup"
+/>
+
+## What is actually NextJS ?
+
+Let's start by knowing what actually is NextJS?.
+As you are on this blog post, you might already know what the NextJS is but it is my duty to tell you.
+In short <CustomLink to="https://nextjs.org" text="NextJS"/> is a framework for ReactJS created by <CustomLink to="https://vercel.com/dashboard" text="vercel"/> where
+this blog is currently hosted. It has some really amazing features such as
+**Static Site Generation**, **Server Side rendering**, **Image Optimization** etc.
+It helps creating websites way easier while using power of React at your finguretips.
+
+## What is firebase ?
+
+We have seen that NextJS is a really great tool for building web apps but
+if you want to use some databases or some backend stuff, you probabaly need to use node js.
+This is also fine till some other phenomeno come into picture such as cloud storage, authentication etc.
+If you implement your own backend, you need to take into account all these things and trust me, you cannot run away from that.
+This is where <CustomLink to="https://firebase.google.com/" text="Firebase"/> shines.  
+Google has given us a lot of backend functionality rigt in our hands. What we have to do is just set things up with our
+framework of choice and call the predefined functions given by firebase. If you are new to this stuff, don't sweat it.
+I will make things simple so that you can get started with NextJS and firebase with a little bit of knowledge.  
+This is a series of blog posts where in this first post, we will do a basic setup such as c
+reating NextJS app and installing firebase and tailwindcss.
+( forgot to mention that you will get to know how to setup NextJS with tailwind.
+If you do not want to use tailwind then you can skip the tailwind specific package installation and setup. )  
+Enough talking. Let's jump in.
+
+## The basic setup.
+
+> **TL;DR** If you want to type in the commands yourself and have a closer look
+> then you can follow along with this post otherwise you can simply clone <CustomLink to="https://github.com/g-mahendra/next-tailwind-template" text="this"/> repository,
+> install firebase with `yarn add firebase` or `npm install firebase` and move to the next part using the link at bottom of this page
+
+For this, we will create a basic NextJS app first and then we will do the setup step by step.
+We will use `create-next-app` which gives us bare minimum code in order to get started.
+We are calling the app as firebase-example. You are free to choose whatever you want.  
+So we will open up our terminal and type the following command.
+
+```
+$ npx create-next-app firebase-example
+```
+
+This will create a basic nextjs starter app with name firebase-example.Now change the current directory to **firebase-example** with
+
+```
+$ cd firebase-example
+```
+
+Once we are in the directory,
+we will install the necessary packages which will be required in order to use tailwindcss and firebase.  
+In the terminal, we will type
+
+```
+# tailwind specific packages ( optional )
+
+# if using yarn
+$ yarn add -D tailwindcss@latest postcss@latest autoprefixer@latest
+
+# if using npm
+$ npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+```
+
+followed by
+
+```
+# firebase node_module
+
+# if using yarn
+$ yarn add firebase
+
+# if using npm
+$ npm install firebase
+```
+
+This will take care of all the necessary packages for tailwind and firebase.
+You don't need more details on what they do as tailwind will take care of all the necessary stuff for us.
+
+Now that all the packages are installed, open up your code editor of choice.
+( please do not even think of opening Notepad or Notepad++ 😅. Just kidding )
+I am using Visual Studio Code. You can use whatever suits you.
+
+I have the command set up so I will type
+
+```
+$ code .
+```
+
+and this will open up VSCode in my cwd ( current working directory )
+
+## Some tailwind specific setup
+
+We will go over this quickly. You can learn more about this setup <CustomLink to="https://tailwindcss.com/docs/guides/nextjs" text="here"/>.
+
+1. First we will start by deleting the styles directory as we will not be using our custom styles. So we will delete the folder highlighted in image shown below.
+   ![Image showing directory to be deleted](/images/styles.png)
+
+2. After deleting styles directory, make sure to fix the imports where the styles were imported
+   otherwise you are going to see a bag of errors on the screen. Once we are done with it, we need to
+   initialize the tailwind configuration so that we can actually use it. For this type the following command inside the terminal.
+
+```
+# initialize tailwind command
+$ npx tailwindcss init -p
+```
+
+3. Now the third task is to add the import statement in our `_app.js` file which makes sure that all tailwind styles are applied throughout our application.
+   So add the following line at the top of \_app.js file.
+
+```
+ import 'tailwindcss/tailwind.css'
+```
+
+4. The one last thing remains is changing the purge array to the following
+
+```
+purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+```
+
+inside `tailwind.config.js`.
+This will make sure that you don't ship the unused css to the client side so that faster builds are ensured.
+
+## Summary
+
+This was a basic setup with nextjs, tailwind and firebase.
+Integrating the firebase with nextjs along with tailwind css is one of the most amazing combinations
+out there in web development world.
+Now you can move to the next part where we will implement firebase authentication and signin and signup forms using tailwind.

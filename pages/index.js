@@ -41,7 +41,7 @@ export default function Index({ posts }) {
           </div>
         </div>
         <h2 className="text-3xl font-bold">Recent Posts</h2>
-        <div className="space-y-2">
+        <div className="space-y-4">
           {posts.map((post) => (
             <div className="md:w-4/5" key={post.filePath}>
               <Link
@@ -49,7 +49,7 @@ export default function Index({ posts }) {
                 href={`/posts/[slug]`}
               >
                 <a>
-                  <h3 className="md:text-xl text-lg font-bold hover:text-teal">
+                  <h3 className="md:text-xl text-lg font-bold hover:text-teal dark:hover:text-lightTeal">
                     {post.data.title}
                   </h3>
                   <h4 className="md:text-lg">{post.data.description}</h4>
@@ -66,11 +66,10 @@ export default function Index({ posts }) {
   );
 }
 
-export function getStaticProps() {
+export async function getStaticProps() {
   const posts = postFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
     const { content, data } = matter(source);
-
     return {
       content,
       data,

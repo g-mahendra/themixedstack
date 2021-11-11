@@ -7,7 +7,7 @@ thumbnail: "/images/scrollbar.png"
 imageAlt: "Hiding scrollbars in tailwind and NextJS project ( only for Chromium based browsers )"
 ---
 
-<BlogImage shouldPreload={true} url="/images/scrollbar.png" />
+<BlogNextImage alt="banner" shouldPreload={true} url="/images/scrollbar.png" />
 
 ## What is this ?
 
@@ -97,7 +97,11 @@ If you want to completely hide the scrollbar, add
 This will completely minimize the appearence of scrollbar. You can see this effect yourself right now. Even if you are able to scroll the content, you don't see a scrollbar
 for this whole blog as shown in image bellow.
 
-<BlogImage shouldPreload={true} url="/images/without.png" />
+<BlogNextImage
+  alt="Image showing web page with default scrollbars on google chrome"
+  shouldPreload={true}
+  url="/images/without.png"
+/>
 
 If you want to change the appearence of the scrollbar then add
 
@@ -125,6 +129,10 @@ Similarly the property with the name **thumb** changes the appearence of the pil
 
 In the image shown bellow, you can see the customized scrollbar for this blog.
 
-<BlogImage shouldPreload={true} url="/images/with.png" />
+<BlogNextImage
+  alt="Image showing web page with customized scrollbars"
+  shouldPreload={true}
+  url="/images/with.png"
+/>
 
 That's it. This is how you hide the scrollbar for the websites with Chromium based browsers.

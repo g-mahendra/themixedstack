@@ -18,7 +18,7 @@ const AllPosts = ({ posts }) => {
     >
       <div className="space-y-10">
         <h1 className="text-3xl font-bold">All Blog Posts</h1>
-        <div className="space-y-2">
+        <div className="space-y-4">
           {posts.map((post) => (
             <div className="md:w-4/5" key={post.filePath}>
               <Link
@@ -26,7 +26,7 @@ const AllPosts = ({ posts }) => {
                 href={`/posts/[slug]`}
               >
                 <a>
-                  <h2 className="md:text-xl text-lg font-bold hover:text-teal">
+                  <h2 className="md:text-xl text-lg font-bold hover:text-teal dark:hover:text-lightTeal">
                     {post.data.title}
                   </h2>
                   <h3 className="md:text-lg">{post.data.description}</h3>
