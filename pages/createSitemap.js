@@ -49,7 +49,6 @@ export const getServerSideProps = async ({ res }) => {
           return `
             <url>
               <loc>${url}</loc>
-              <lastmod>${new Date().toISOString()}</lastmod>
             </url>
           `;
         })
