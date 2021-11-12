@@ -17,6 +17,8 @@ export default function Index({ posts }) {
         image: "/icons/mixed_stack_logo.svg",
         imageAlt: "The Mixed Stack website logo",
         postedOn: null,
+        modifiedOn: null,
+        tags: null
       }}
     >
       <div className="space-y-10">
@@ -49,7 +51,7 @@ export default function Index({ posts }) {
                 href={`/posts/[slug]`}
               >
                 <a>
-                  <h3 className="md:text-xl text-lg font-bold hover:text-teal dark:hover:text-lightTeal">
+                  <h3 className="md:text-xl text-lg font-bold hover:text-teal dark:hover:text-lightTeal hover:underline">
                     {post.data.title}
                   </h3>
                   <h4 className="md:text-lg">{post.data.description}</h4>

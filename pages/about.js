@@ -91,6 +91,8 @@ const About = () => {
         image: "/icons/g-mahendra.svg",
         imageAlt: "An avatar of author of The Mixed Stack blog",
         postedOn: null,
+        modifiedOn: null,
+        tags: null,
       }}
     >
       <div className="space-y-2">

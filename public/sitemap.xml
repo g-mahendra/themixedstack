@@ -2,31 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://themixedstack.com/about</loc>
-    <lastmod>2021-11-08T15:55:48.163Z</lastmod>
+    <lastmod>2021-11-12T12:49:20.296Z</lastmod>
   </url>
 
   <url>
     <loc>https://themixedstack.com/allposts</loc>
-    <lastmod>2021-11-08T15:55:48.163Z</lastmod>
+    <lastmod>2021-11-12T12:49:20.296Z</lastmod>
   </url>
 
   <url>
     <loc>https://themixedstack.com/</loc>
-    <lastmod>2021-11-08T15:55:48.163Z</lastmod>
+    <lastmod>2021-11-12T12:49:20.296Z</lastmod>
   </url>
 
   <url>
-    <loc>https://themixedstack.com/posts/hide-scrollbar-on-chrome</loc>
-    <lastmod>2021-11-08T15:55:48.163Z</lastmod>
+    <loc>https://themixedstack.com/posts/change-scrollbar-on-chrome</loc>
+    <lastmod>2021-11-12T12:49:20.297Z</lastmod>
   </url>
 
   <url>
-    <loc>https://themixedstack.com/posts/next-mdx-tailwind-part-1</loc>
-    <lastmod>2021-11-08T15:55:48.163Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://themixedstack.com/posts/next-mdx-tailwind-part-2</loc>
-    <lastmod>2021-11-08T15:55:48.163Z</lastmod>
+    <loc
+      >https://themixedstack.com/posts/integrate-firebase-with-nextjs-part-1-the-setup</loc
+    >
+    <lastmod>2021-11-12T12:49:20.297Z</lastmod>
   </url>
 </urlset>

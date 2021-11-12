@@ -14,6 +14,8 @@ const AllPosts = ({ posts }) => {
         image: "/icons/mixed_stack_logo.svg",
         imageAlt: "The Mixed Stack website logo",
         postedOn: null,
+        modifiedOn: null,
+        tags: null
       }}
     >
       <div className="space-y-10">
@@ -26,7 +28,7 @@ const AllPosts = ({ posts }) => {
                 href={`/posts/[slug]`}
               >
                 <a>
-                  <h2 className="md:text-xl text-lg font-bold hover:text-teal dark:hover:text-lightTeal">
+                  <h2 className="md:text-xl text-lg font-bold hover:text-teal dark:hover:text-lightTeal hover:underline">
                     {post.data.title}
                   </h2>
                   <h3 className="md:text-lg">{post.data.description}</h3>
