@@ -18,8 +18,8 @@ const AllPosts = ({ posts }) => {
         tags: null
       }}
     >
-      <div className="space-y-10">
-        <h1 className="text-3xl font-bold">All Blog Posts</h1>
+      <div className="space-y-10 flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
+        <h1 className="text-3xl font-bold tracking-tight">All Blog Posts</h1>
         <div className="space-y-4">
           {posts.map((post) => (
             <div className="md:w-4/5" key={post.filePath}>
@@ -28,13 +28,13 @@ const AllPosts = ({ posts }) => {
                 href={`/posts/[slug]`}
               >
                 <a>
-                  <h2 className="md:text-xl text-lg font-bold hover:text-teal dark:hover:text-lightTeal hover:underline">
+                  <h2 className="md:text-xl text-lg tracking-tight font-bold hover:text-teal dark:hover:text-lightTeal hover:underline">
                     {post.data.title}
                   </h2>
                   <h3 className="md:text-lg">{post.data.description}</h3>
                 </a>
               </Link>
-              <p className="font-extralight text-sm">
+              <p className="font-extralight text-sm tracking-tight">
                 Posted on: {post.data.date}
               </p>
             </div>

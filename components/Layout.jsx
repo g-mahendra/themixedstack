@@ -72,7 +72,8 @@ const Layout = ({ children, headData }) => {
           ))}
       </Head>
       <Navbar />
-      <main className="md:w-3/5 m-auto px-4 pb-10">{children}</main>
+      {/* <main className="md:w-3/5 m-auto px-4 pb-10">{children}</main> */}
+      <main className="flex flex-col justify-center px-8">{children}</main>
     </React.Fragment>
   );
 };

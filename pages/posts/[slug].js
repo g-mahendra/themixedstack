@@ -28,14 +28,14 @@ export default function PostPage({ source, frontMatter }) {
         imageAlt: frontMatter.imageAlt ? frontMatter.imageAlt : "",
         postedOn: new Date(frontMatter.date).toISOString(),
         modifiedOn: new Date(frontMatter.modifiedOn).toISOString(),
-        tags: frontMatter.tags
+        tags: frontMatter.tags,
       }}
     >
-      <div>
+      <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
         <PostHeader title={frontMatter.title} date={frontMatter.date} />
-      </div>
-      <article className="prose md:prose-lg dark:prose-dark md:dark:prose-lg">
-        <MDXRemote {...source} components={components} />
+        <div className="w-full mt-4 prose dark:prose-dark max-w-none">
+          <MDXRemote {...source} components={components} />
+        </div>
       </article>
     </Layout>
   );

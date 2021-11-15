@@ -95,9 +95,9 @@ const About = () => {
         tags: null,
       }}
     >
-      <div className="space-y-2">
+      <div className="space-y-2 flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
         <div className="flex flex-col items-center w-max">
-          <div className="rounded-full border-teal border-4 w-max flex flex-col items-center">
+          <div className="rounded-full border-teal dark:border-lightTeal border-4 w-max flex flex-col items-center">
             <Image
               alt="Author's picture avatar"
               className="rounded-full"
@@ -108,10 +108,10 @@ const About = () => {
           </div>
           <p className="text-lg">g-mahendra</p>
         </div>
-        <h1 className="md:text-3xl text-2xl font-semibold">
+        <h1 className="md:text-3xl text-2xl font-semibold tracking-tight">
           About the Author and blog
         </h1>
-        <p className="md:text-lg">
+        <p className="md:text-lg tracking-tight">
           The Author ( g-mahendra ) of this blog is an undergraduate student at
           Walchand College of Engineering, Sangli in India. He is passionate
           about web and web frameworks specally{" "}
@@ -121,12 +121,12 @@ const About = () => {
           blog is one the means he uses to share his learnings with thw world
         </p>
 
-        <div>
+        <div className="flex md:flex-row flex-col w-full flex-wrap">
           {social.map((item) => {
             return (
               <div
                 key={item.id}
-                className="flex flex-row items-center space-x-4 my-2"
+                className="flex flex-row items-center space-x-4 my-2 md:mx-auto md:w-1/2"
               >
                 <img
                   alt={`${item.name} logo`}
