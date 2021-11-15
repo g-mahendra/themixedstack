@@ -7,6 +7,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mdx-js/loader": "^1.6.18",
+    "@mdx-js/mdx": "^1.6.18",
+    "@mdx-js/react": "^1.6.18",
+    "@next/mdx": "^9.5.3",
     "@tailwindcss/typography": "^0.4.1",
     "gray-matter": "^4.0.2",
     "next": "latest",

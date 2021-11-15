@@ -65,13 +65,14 @@ Here you have two choices of adding tailwind styles.
 One way is to remove the styles directory provided by NextJS setup and add
 
 ```jsx
-import "tailwindcss/tailwind.css";
+import "something/otherthing"
 ```
+
 
 at the top of `_app.js` file.
 This way, we can completely rely on styles provided by tailwind without having to write our own css anywhere inside the project. But for our use case we want to add custome css so what you have to do is add
 
-```CSS
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -89,7 +90,7 @@ Here also you have two choices.
 
 If you want to completely hide the scrollbar, add
 
-```CSS
+```css
 ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
@@ -107,7 +108,7 @@ for this whole blog as shown in image bellow.
 
 If you want to change the appearence of the scrollbar then add
 
-```CSS
+```css
 ::-webkit-scrollbar-track {
   border-radius: 100vh;
   background: rgb(100, 100, 100);

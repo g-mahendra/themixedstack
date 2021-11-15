@@ -8,10 +8,6 @@ import Layout from "../../components/Layout";
 import PostHeader from "../../components/PostHeader";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 
-// Custom components/renderers to pass to MDX.
-// Since the MDX files aren't loaded by webpack, they have no knowledge of how
-// to handle import statements. Instead, you must include components in scope
-// here.
 const components = {
   BlogNavigation: dynamic(() => import("../../components/BlogNavigation")),
   BlogNextImage: dynamic(() => import("../../components/BlogNextImage")),
@@ -48,11 +44,6 @@ export const getStaticProps = async ({ params }) => {
   const { content, data } = matter(source);
 
   const mdxSource = await serialize(content, {
-    // Optionally pass remark/rehype plugins
-    mdxOptions: {
-      remarkPlugins: [],
-      rehypePlugins: [],
-    },
     scope: data,
   });
 

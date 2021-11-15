@@ -93,16 +93,6 @@ module.exports = {
                 borderBottomColor: theme("colors.gray.700"),
               },
             },
-            code: {
-              color: theme("colors.lightTeal"),
-              backgroundColor: "black",
-            },
-            pre: {
-              code: {
-                color: "white",
-                backgroundColor: "transparent",
-              },
-            },
           },
         },
       }),
