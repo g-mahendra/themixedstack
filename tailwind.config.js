@@ -1,5 +1,5 @@
 const colors = require("tailwindcss/colors");
-const { fontFamily, spacing } = require("tailwindcss/defaultTheme");
+const { fontFamily, spacing, backdropBlur } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
@@ -10,7 +10,7 @@ module.exports = {
       ...theme("colors"),
       main: "#212225",
       lightTeal: "#79ffe1",
-      lightGray: "rgba(100, 100, 100, 0.5)",
+      lightGray: "rgba(100, 100, 100, 0.3)",
       teal: "#008080",
     }),
     colors: {
@@ -49,7 +49,7 @@ module.exports = {
             thead: {
               borderBottomColor: theme("colors.gray.200"),
             },
-            code: { color: theme("colors.pink.500") },
+            code: { color: theme("colors.lightTeal"), backgroundColor: "black", padding: '2px' },
             "blockquote p:first-of-type::before": false,
             "blockquote p:last-of-type::after": false,
           },

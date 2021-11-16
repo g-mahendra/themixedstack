@@ -7,6 +7,10 @@ import path from "path";
 import Layout from "../../components/Layout";
 import PostHeader from "../../components/PostHeader";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
+import rehypeSlug from "rehype-slug";
+import rehypeCodeTitles from "rehype-code-titles";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypePrism from "rehype-prism-plus";
 
 const components = {
   BlogNavigation: dynamic(() => import("../../components/BlogNavigation")),
@@ -44,6 +48,21 @@ export const getStaticProps = async ({ params }) => {
   const { content, data } = matter(source);
 
   const mdxSource = await serialize(content, {
+    mdxOptions: {
+      rehypePlugins: [
+        rehypeSlug,
+        rehypeCodeTitles,
+        rehypePrism,
+        [
+          rehypeAutolinkHeadings,
+          {
+            properties: {
+              className: ["anchor"],
+            },
+          },
+        ],
+      ],
+    },
     scope: data,
   });
 

@@ -65,9 +65,8 @@ Here you have two choices of adding tailwind styles.
 One way is to remove the styles directory provided by NextJS setup and add
 
 ```jsx
-import "something/otherthing"
+ import 'tailwindcss/tailwind.css';
 ```
-
 
 at the top of `_app.js` file.
 This way, we can completely rely on styles provided by tailwind without having to write our own css anywhere inside the project. But for our use case we want to add custome css so what you have to do is add
